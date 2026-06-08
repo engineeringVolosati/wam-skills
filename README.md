@@ -48,8 +48,12 @@ wam-skills/
 │   ├── stickers-emoji.md            # Generate and upload sticker/emoji packs via agent
 │   └── userbot-setup.md             # Telethon userbot: setup, signing rules, queue pattern, limit risks
 │
-└── agent-behavior/
-    └── language-formatting.md       # Language discipline + code block and link rules
+├── agent-behavior/
+│   └── language-formatting.md       # Language discipline + code block and link rules
+│
+└── wam-platform/
+    ├── platform-notes.md            # Storage tiers, supervisor, known limits (dated, recheck on updates)
+    └── connect-to-service.md        # "I want to connect to X" — decision tree, exhaust options, issue+support fallback
 ```
 
 ---
@@ -96,6 +100,12 @@ how an uncontrolled agent loop can drain FloodWait budget fast.
 user's language, user-visible notes and memory in user's language (no context drift
 from translation), reasoning in the most token-efficient language. Code block and
 link formatting rules for Telegram and Markdown.
+
+**wam-platform** — Storage tiers (workspace vs tmp vs ~/.local vs vault), what the
+supervisor manages vs topic_loader daemons, known platform limits with dates (set_model
+bug, CronCreate session-only, etc.), post-wipe recovery. Also: "I want to connect to X"
+— decision tree to exhaust all options before declaring impossible, and how to file an
+issue + /support fallback when genuinely blocked.
 
 ---
 
