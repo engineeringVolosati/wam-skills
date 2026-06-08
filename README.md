@@ -31,7 +31,12 @@ wam-skills/
 │   └── findings-board-template.md   # Shared research board for parallel agent teams
 │
 ├── research/
-│   └── pwc_search.sh                # PapersWithCode search CLI
+│   ├── pwc_search.sh                # PapersWithCode search CLI
+│   ├── jina-reader.md               # Jina r.jina.ai — clean page text without JS/CSS
+│   └── agent-browser.md             # agent-browser: headless Chrome for auth/JS sites
+│
+├── github/
+│   └── agent-github-guide.md        # Read files, search repos, create issues/PRs via API
 │
 ├── chat-management/
 │   └── topic-override-pattern.md    # How topic overrides work in WAM agents
@@ -64,7 +69,13 @@ Your agent becomes reachable on your Tailnet without any VPS or open ports.
 for multi-agent research sprints.
 
 **research** — `pwc_search.sh`: query PapersWithCode API for papers, datasets, and methods
-from a single bash one-liner.
+from a single bash one-liner. `jina-reader.md`: strip any public page to clean markdown
+in one curl call. `agent-browser.md`: headless Chrome for sites that block scrapers or
+require login — click, fill forms, save auth cookies.
+
+**github** — Decision tree for reading files, exploring repos, creating issues and PRs,
+merging, and pushing — all without a browser. Python `urllib` patterns, `gh` CLI caveats,
+token setup.
 
 **chat-management** — How `topics.json`, `topic_loader`, and `override.md` interact.
 Override files are intentionally lean; this guide explains why and how to structure them.
