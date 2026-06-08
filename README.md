@@ -77,7 +77,8 @@ wam-skills/
 │   └── userbot-setup.md             # Telethon userbot: setup, signing rules, queue pattern, limit risks
 │
 ├── agent-behavior/
-│   └── language-formatting.md       # Language discipline + code block and link rules
+│   ├── language-formatting.md       # Language discipline + code block and link rules
+│   └── bash-pitfalls.md             # Heredoc quoting, send-to-self trap, other silent failures
 │
 └── wam-platform/
     ├── platform-notes.md            # Storage tiers, supervisor, known limits (dated, recheck on updates)
