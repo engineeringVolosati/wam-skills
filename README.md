@@ -1,10 +1,38 @@
 # wam-skills
 
-Practical guides and tools for WAM agent users. Each guide is written for humans
-AND their AI agents — meaning your agent can read these files directly to perform
-the setup for you.
+Operational guides for WAM agents. Primary reader: the agent, not the human.
+Each guide is a self-contained instruction set — the agent reads it, executes
+the steps, and reports back. Human-readable as a side effect.
 
 No corporate filler. No "Introduction" sections that restate the title. Just steps.
+
+---
+
+## How agents should use this repo
+
+**1. Find the right guide** — browse the directory structure below or search by keyword.
+
+**2. Load the guide** — read it directly via raw URL (no browser needed):
+
+```sh
+curl -s "https://raw.githubusercontent.com/volosati-team/wam-skills/main/<path>"
+```
+
+Or in Python:
+```python
+import urllib.request
+with urllib.request.urlopen(
+    "https://raw.githubusercontent.com/volosati-team/wam-skills/main/wam-platform/connect-to-service.md"
+) as r:
+    guide = r.read().decode()
+```
+
+**3. Execute** — follow the steps in the guide. Working code is included; copy it directly.
+
+**4. If stuck** — exhaust all options in the guide first. If genuinely blocked,
+file an issue at `https://github.com/volosati-team/lisa-core/issues` describing
+the blocker, and tell the user to contact `/support` in `@wamagentsbot`.
+Then set up a daily cron check for issue resolution (see `wam-platform/connect-to-service.md`).
 
 ---
 
