@@ -44,8 +44,11 @@ wam-skills/
 ├── scheduling/
 │   └── lisa-cron-quickstart.md      # lisa-cron TOML reference + common patterns
 │
-└── telegram/
-    └── stickers-emoji.md            # Generate and upload sticker/emoji packs via agent
+├── telegram/
+│   └── stickers-emoji.md            # Generate and upload sticker/emoji packs via agent
+│
+└── agent-behavior/
+    └── language-formatting.md       # Language discipline + code block and link rules
 ```
 
 ---
@@ -85,6 +88,11 @@ daily at a fixed local time. Timezone field, timeout_secs, job anatomy.
 
 **telegram** — Generate images, resize to Telegram spec, upload as sticker or custom
 emoji pack. Static, animated, and video sticker requirements.
+
+**agent-behavior** — Language discipline: prompts and docs in English, replies in
+user's language, user-visible notes and memory in user's language (no context drift
+from translation), reasoning in the most token-efficient language. Code block and
+link formatting rules for Telegram and Markdown.
 
 ---
 
