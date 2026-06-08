@@ -45,7 +45,8 @@ wam-skills/
 │   └── lisa-cron-quickstart.md      # lisa-cron TOML reference + common patterns
 │
 ├── telegram/
-│   └── stickers-emoji.md            # Generate and upload sticker/emoji packs via agent
+│   ├── stickers-emoji.md            # Generate and upload sticker/emoji packs via agent
+│   └── userbot-setup.md             # Telethon userbot: setup, signing rules, queue pattern, limit risks
 │
 └── agent-behavior/
     └── language-formatting.md       # Language discipline + code block and link rules
@@ -86,8 +87,10 @@ Override files are intentionally lean; this guide explains why and how to struct
 **scheduling** — lisa-cron TOML quick reference. Common patterns: every 5 min, hourly,
 daily at a fixed local time. Timezone field, timeout_secs, job anatomy.
 
-**telegram** — Generate images, resize to Telegram spec, upload as sticker or custom
-emoji pack. Static, animated, and video sticker requirements.
+**telegram** — Sticker and emoji pack generation. Userbot setup via Telethon: first
+auth, queue pattern, signing rules (always identify as agent), no-send-without-permission
+policy, internal use cases (wake agents, broadcast notifications), and limit risks —
+how an uncontrolled agent loop can drain FloodWait budget fast.
 
 **agent-behavior** — Language discipline: prompts and docs in English, replies in
 user's language, user-visible notes and memory in user's language (no context drift
